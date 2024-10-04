@@ -1,0 +1,260 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0d17; /* Dark blue background */
+    color: #e0e0e0; /* Light text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff; /* White text for the header */
+    letter-spacing: 1px;
+}
+
+/* Container for profile and intro */
+.container {
+    display: flex;
+    align-items: center; /* Center align the items vertically */
+    margin-top: 20vh; /* Adjust margin as necessary */
+}
+
+/* Introduction section */
+.intro {
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Space between image and text */
+}
+
+.intro h2 {
+    font-size: 3.2rem;
+    color: #ffffff; /* White text */
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.intro p {
+    color: #8e8ea1;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons .btn {
+    padding: 12px 28px;
+    border: 2px solid #7e6df0; /* Purple outline for button */
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: 0.4s;
+}
+
+.buttons .btn:hover {
+    background-color: #7e6df0; /* Purple background on hover */
+    color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(126, 109, 240, 0.6); /* Subtle shadow on hover */
+}
+
+.buttons .btn-alt {
+    background-color: #7e6df0;
+    color: white;
+}
+.profile-pic img {
+    width: 400px; /* Fixed size */
+    height: 450px; /* Fixed size */
+    object-fit: cover;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2); /* Deep shadow effect */
+    transition: transform 0.3s ease;
+    margin-right: 15vw;
+    margin-top: 5vh;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    color: #8e8ea1;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+/* Footer styles */
+footer {
+    position: fixed; /* Keep it fixed on the screen */
+    left: 20px; /* Increase margin from the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust to center it perfectly */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox to arrange items */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Increase space between icons */
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    font-size: 24px; /* Size of icons */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 5px; /* Add margin to the left of each icon */
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed; /* Fix the navbar at the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust to center it perfectly */
+    display: flex; /* Use flexbox to arrange items */
+    background-color: rgba(255, 255, 255, 0.5); /* More transparent background */
+    border-radius: 30px; /* Round the edges */
+    padding: 10px; /* Padding around the items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    backdrop-filter: blur(15px); /* Increased blur effect for background */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.nav-item {
+    color: #333; /* Icon color */
+    font-size: 24px; /* Size of icons */
+    margin: 0 30px; /* Increased space between icons */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    color: #007AFF; /* Change color on hover (macOS blue) */
+}
+
+/* Style for date and time */
+.datetime {
+    font-size: 14px; /* Lower font size for better fit */
+    font-weight: 400; /* Regular weight for a lighter look */
+    text-align: center; /* Center text */
+    margin: 0; /* No margins */
+}
+
+/* Padding to ensure content doesn't overlap the header */
+body {
+    margin: 0; /* Remove default body margin */
+    padding-top: 0px; /* Padding for body content to fit below the header */
+}
+
+.social-icons .lc {
+    margin-left: 0px;
+}
+/* Style for date and time */
+.datetime {
+    font-size: 14px; /* Lower font size for better fit */
+    font-weight: 400; /* Regular weight for a lighter look */
+    text-align: center; /* Center text */
+    margin: 0; /* No margins */
+    height: 20px; /* Reserve space for the date and time to avoid content shift */
+}
+@media screen and (max-width: 600px) {
+    footer {
+        bottom: 10px; /* Adjust position for smaller screens */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Stack icons horizontally on small devices */
+        gap: 10px;
+        justify-content: center; /* Center the icons */
+    }
+}
+/* Mobile devices (up to 600px wide) */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        margin-top: 10vh; /* Adjust margin for smaller screens */
+        text-align: center; /* Center align the text */
+    }
+
+    .profile-pic img {
+        width: 200px; /* Smaller profile picture */
+        height: 200px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .intro h2 {
+        font-size: 2.4rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .buttons .btn {
+        margin: 10px 0; /* Stack the buttons on top of each other */
+        width: 80%; /* Make buttons wider */
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-item {
+        font-size: 20px; /* Smaller icons */
+        margin: 0 10px; /* Reduce space between icons */
+    }
+}
+
+/* Tablets (600px to 900px wide) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15vh;
+    }
+
+    .profile-pic img {
+        width: 250px; /* Adjust profile image size */
+        height: 300px;
+    }
+
+    .intro h2 {
+        font-size: 2.8rem;
+    }
+
+    .buttons .btn {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    .navbar {
+        padding: 8px;
+    }
+
+    .nav-item {
+        font-size: 22px;
+        margin: 0 20px; /* Less space between icons */
+    }
+}
